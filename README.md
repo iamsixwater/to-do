@@ -4,7 +4,7 @@ A simple to-do list page with React.js.
 
 ## Technical Stack
 
-- React.js (Hooks)
+- ReactJS (Hooks)
 - PostCSS
 
 ## Functions
