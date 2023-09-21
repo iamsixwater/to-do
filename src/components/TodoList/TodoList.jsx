@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddTodo from "../AddTodo/AddTodo";
 
 export default function TodoList() {
   const [todos, setTodos] = useState([
@@ -6,6 +7,10 @@ export default function TodoList() {
     { id: "2", text: "sleep", status: "active" },
     { id: "3", text: "study", status: "active" },
   ]);
+  const handleAdd = (todo) => {
+    setTodos([...todos, todo]);
+  };
+
   return (
     <div>
       <ul>
@@ -13,6 +18,7 @@ export default function TodoList() {
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>
+      <AddTodo onAdd={handleAdd} />
     </div>
   );
 }
